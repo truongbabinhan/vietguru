@@ -1,113 +1,428 @@
-import Image from 'next/image'
+import Image from "next/image";
 
 export default function Home() {
+  const menu = ["Về Việt Guru", "Về ứng dụng", "Gói học", "Hỗ trợ"];
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+    <main className="flex min-h-screen flex-col bg-white text-black">
+      {/* Header */}
+      <div className="px-[56px] py-[30px] flex items-center justify-between w-full border-b-[#BDBDBD] border-b">
+        <Image src="/logo.svg" alt="Logo" width={84} height={56} priority />
+        <ul
+          className="flex items-center gap-[64px] text-[#424242]"
+          style={{ fontFamily: "Baloo" }}
+        >
+          {menu.map((item, index) => {
+            return (
+              <li className="cursor-pointer hover:text-[#008AE3]" key={index}>
+                {item}
+              </li>
+            );
+          })}
+        </ul>
+        <p>VIE</p>
+      </div>
+
+      {/* Banner */}
+      <div className="flex justify-center items-center gap-[120px] pt-[44px] pb-[110px]">
+        <Image
+          src="/phone-mockup.png"
+          alt="banner"
+          width={456}
+          height={535}
+          priority
+        />
+        <div>
+          <h2 style={{ fontFamily: "Cubano" }} className="text-[28px]">
+            TIẾNG VIỆT CHO TRẺ EM GỐC VIỆT Ở NƯỚC NGOÀI
+          </h2>
+          <h1 style={{ fontFamily: "Cubano" }} className="text-[60px] pb-4">
+            VIỆT GURU
+          </h1>
+          <p
+            style={{ fontFamily: "Baloo", lineHeight: 1.3 }}
+            className="max-w-[477px] text-[24px] pb-5 text-[#424242]"
           >
-            By{' '}
+            Tạo ra môi trường học tiếng Việt gần gũi, giúp bé tiếp xúc và luyện
+            tập tiếng Việt mỗi ngày ngay tại nhà
+          </p>
+          <div className="flex items-center gap-[15px]">
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
+              src="/appstore.png"
+              alt="store"
+              width={135}
+              height={40}
               priority
+              className="cursor-pointer"
             />
-          </a>
+            <Image
+              src="/googleplay.png"
+              alt="store"
+              width={135}
+              height={40}
+              priority
+              className="cursor-pointer"
+            />
+          </div>
         </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+      {/* Ve VietGuru */}
+      <div className="py-[60px] flex flex-col justify-center items-center w-full bg-[#FFFADF] relative overflow-hidden">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
+          src="/flower.png"
+          alt="Logo"
+          width={474}
+          height={466}
           priority
+          className="absolute left-[-154px] top-[50px]"
         />
+        <Image
+          src="/flower.png"
+          alt="Logo"
+          width={474}
+          height={466}
+          priority
+          className="absolute bottom-[313px] right-[-125px] rotate-90"
+        />
+        <Image
+          src="/logo.svg"
+          alt="Logo"
+          width={84}
+          height={56}
+          priority
+          className="mb-[60px]"
+        />
+        <Image src="/kid1.png" alt="Logo" width={734} height={339} priority />
+        <p
+          className="text-[24px] pt-[42px] pb-[120px] max-w-[934px] text-[#424242] text-center font-bold"
+          style={{ fontFamily: "Nunito" }}
+        >
+          Bé học nói, học giao tiếp tiếng Việt, khám phá văn hóa vùng miền Việt
+          Nam <br />
+          một cách vui vẻ, đầy hứng thú mà vẫn hiệu quả.
+        </p>
+        <p className="text-[40px]" style={{ fontFamily: "Cubano" }}>
+          VIỆT GURU đồng hành cùng
+        </p>
+        <div className="mt-[24px] mb-[50px] w-[696px] h-[180px] flex flex-col rounded-full justify-center items-center bg-[#FFFFF0]">
+          <div className="flex justify-center items-center gap-[30px]">
+            <Image
+              src="/rating.png"
+              alt="Logo"
+              width={80}
+              height={80}
+              priority
+            />
+            <p
+              style={{ fontFamily: "Cubano", lineHeight: 1.3 }}
+              className="text-[80px]"
+            >
+              360.000 <span className="text-[20px]">bé</span>
+            </p>
+          </div>
+          <p
+            className="text-[#424242] font-bold text-[20px]"
+            style={{ fontFamily: "Nunito" }}
+          >
+            đang sử dụng để học Tiếng Việt
+          </p>
+        </div>
+
+        <div className="flex justify-center items-center gap-5">
+          <div className="bg-[#FFFFF0] rounded-[45px] w-[219px] h-[300px] flex flex-col justify-center items-center gap-[15px]">
+            <Image
+              src="/earth-globe.png"
+              alt="Logo"
+              width={80}
+              height={80}
+              priority
+            />
+            <p
+              style={{ fontFamily: "Cubano", lineHeight: 0.8 }}
+              className="text-[80px]"
+            >
+              25 <span className="text-[20px] ml-[-10px]">nước</span>
+            </p>
+            <p
+              className="text-[#424242] text-[20px] h-[40px] text-center font-bold mt-[10px]"
+              style={{ fontFamily: "Nunito", lineHeight: 1.2 }}
+            >
+              Việt Guru đã có mặt
+            </p>
+          </div>
+          <div className="bg-[#FFFFF0] rounded-[45px] w-[219px] h-[300px] flex flex-col justify-center items-center gap-[15px]">
+            <Image
+              src="/smile.png"
+              alt="Logo"
+              width={80}
+              height={80}
+              priority
+            />
+            <p
+              style={{ fontFamily: "Cubano", lineHeight: 0.8 }}
+              className="text-[80px]"
+            >
+              96 <span className="text-[20px] ml-[-10px]">%</span>
+            </p>
+            <p
+              className="text-[#424242] text-[20px] h-[40px] text-center font-bold mt-[10px]"
+              style={{ fontFamily: "Nunito", lineHeight: 1.2 }}
+            >
+              Độ hài lòng
+              <br />
+              của phụ huynh
+            </p>
+          </div>
+          <div className="bg-[#FFFFF0] rounded-[45px] w-[219px] h-[300px] flex flex-col justify-center items-center gap-[15px]">
+            <Image src="/star.png" alt="Logo" width={80} height={80} priority />
+            <p
+              style={{ fontFamily: "Cubano", lineHeight: 0.8 }}
+              className="text-[80px]"
+            >
+              4.8 <span className="text-[20px] ml-[-10px]">điểm</span>
+            </p>
+            <p
+              className="text-[#424242] text-[20px] h-[40px] text-center font-bold mt-[10px]"
+              style={{ fontFamily: "Nunito", lineHeight: 1.2 }}
+            >
+              Đánh giá trên
+              <br />
+              cửa hàng ứng dụng
+            </p>
+          </div>
+        </div>
       </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* Ve ung dung */}
+      <div className="bg-[#9bd8ff] relative">
+        <Image
+          src="/cloud.png"
+          alt="bg"
+          width={419}
+          height={208}
+          className="absolute left-[-91px] top-[300px]"
+        />
+        <Image
+          src="/cloud.png"
+          alt="bg"
+          width={419}
+          height={208}
+          className="absolute right-[-91px] top-[1100px]"
+        />
+        <Image
+          src="/cloud.png"
+          alt="bg"
+          width={419}
+          height={208}
+          className="absolute left-[-45px] bottom-[800px]"
+        />
+        <Image
+          src="/cloud.png"
+          alt="bg"
+          width={419}
+          height={208}
+          className="absolute right-[-107px] bottom-[0px]"
+        />
+        <Image
+          src="/huyen.png"
+          alt="bg"
+          width={133}
+          height={145}
+          className="absolute right-[107px] top-[860px]"
+        />
+        <Image
+          src="/hoi.png"
+          alt="bg"
+          width={126}
+          height={120}
+          className="absolute left-[150px] top-[1100px]"
+        />
+        <Image
+          src="/nang.png"
+          alt="bg"
+          width={105}
+          height={112}
+          className="absolute right-[209px] top-[1800px]"
+        />
+        <Image
+          src="/sac.png"
+          alt="bg"
+          width={228}
+          height={185}
+          className="absolute left-[68px] top-[2250px]"
+        />
+        <Image
+          src="/nag.png"
+          alt="bg"
+          width={244}
+          height={170}
+          className="absolute right-[138px] bottom-[300px]"
+        />
+        <div className="w-full h-[100px] mb-[200px] relative">
+          <Image
+            src="/bg-yellow-header.png"
+            alt="bg"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="bottom"
+          />
+        </div>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <p
+          className="text-center text-[50px] uppercase sticky top-1/2 z-10 -translate-y-1/2"
+          style={{ fontFamily: "Cubano", lineHeight: 1.2 }}
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+          Cha mẹ chắp cánh con bay <br /> Để{" "}
+          <span className="text-[#0a7bc2]">việt guru</span> nâng bước con về quê
+          hương
+        </p>
+        <div className="w-full h-[4000px] relative">
+          <Image
+            src="/dots.png"
+            alt="bg"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top"
+          />
+        </div>
+      </div>
+      <div className="bg-[#9bd8ff]">
+        <div className="w-full h-[500px] relative">
+          <Image
+            src="/cloud-bottom.png"
+            alt="bg"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top"
+          />
+        </div>
+      </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+      {/* Co gi hay */}
+      <div className="bg-[#fafafa] pt-[60px]">
+        <p
+          style={{ fontFamily: "Cubano", lineHeight: 1.2 }}
+          className="text-center text-[40px] mb-[80px]"
         >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+          VIỆT GURU có gì hay?
+        </p>
+        <div className="flex justify-center items-center gap-[25px]">
+          <div className="w-[275px] h-[436px] rounded-[20px] flex flex-col items-center gap-4 text-center">
+            <Image
+              src="/onboarding-graphic-02.png"
+              alt="bg"
+              width={100}
+              height={100}
+              style={{ width: "auto", height: "161px" }}
+            />
+            <p>Học tiếng việt cực vui</p>
+            <p>
+              Nội dung chất lượng do Viện ngôn ngữ học biên soạn, đa dạng bài
+              học dưới dạng trò chơi tương tác, sách đọc, video,.... không gây
+              nhàm chán.
+            </p>
+          </div>
+          <div className="w-[275px] h-[436px] rounded-[20px] flex flex-col items-center gap-4 text-center">
+            <Image
+              src="/onboarding-graphic-03.png"
+              alt="bg"
+              width={100}
+              height={100}
+              style={{ width: "auto", height: "161px" }}
+            />
+            <p>Học tiếng việt cực vui</p>
+            <p>
+              Nội dung chất lượng do Viện ngôn ngữ học biên soạn, đa dạng bài
+              học dưới dạng trò chơi tương tác, sách đọc, video,.... không gây
+              nhàm chán.
+            </p>
+          </div>
+          <div className="w-[275px] h-[436px] rounded-[20px] flex flex-col items-center gap-4 text-center">
+            <Image
+              src="/onboarding-graphic-04.png"
+              alt="bg"
+              width={100}
+              height={100}
+              style={{ width: "auto", height: "161px" }}
+            />
+            <p>Học tiếng việt cực vui</p>
+            <p>
+              Nội dung chất lượng do Viện ngôn ngữ học biên soạn, đa dạng bài
+              học dưới dạng trò chơi tương tác, sách đọc, video,.... không gây
+              nhàm chán.
+            </p>
+          </div>
+          <div className="w-[275px] h-[436px] rounded-[20px] flex flex-col items-center gap-4 text-center">
+            <Image
+              src="/onboarding-graphic-05.png"
+              alt="bg"
+              width={100}
+              height={100}
+              style={{ width: "auto", height: "161px" }}
+            />
+            <p>Học tiếng việt cực vui</p>
+            <p>
+              Nội dung chất lượng do Viện ngôn ngữ học biên soạn, đa dạng bài
+              học dưới dạng trò chơi tương tác, sách đọc, video,.... không gây
+              nhàm chán.
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+      {/* package */}
+      <div>
+        <Image src="/package.png" alt="bg" width={490} height={422} />
+        <div>
+          <span>Recommended</span>
+          <p>nâng cấp ngay</p>
+          <p>full package</p>
+          <ul>
+            <li>Truy cập không giới hạn tất cả các tài liệu học tập</li>
+            <li>Sử dụng đồng thời lên đến 4 tài khoản của bé</li>
+            <li>Cung cấp tính năng thông báo và báo cáo học tập</li>
+            <li>BỘ QUÀ TẶNG BỘ HỌC TẬP ĐẶC BIỆT</li>
+          </ul>
+          <p>
+            chỉ từ <span>20$</span>/tháng
           </p>
-        </a>
+        </div>
+      </div>
+
+      {/* Contact */}
+      <div>
+        <p>CONTACT US</p>
+        <p>
+          Ba mẹ có thắc mắc về Việt Guru? Liên hệ ngay với chúng tôi để được tư
+          vấn miễn phí 24/24
+        </p>
+        <div>
+          <div>
+            <div>
+              <input type="text" placeholder="Họ và tên" />
+              <input type="text" placeholder="Email" />
+            </div>
+            <input type="text" placeholder="Tiêu đề" />
+            <textarea type="text" placeholder="Nội dung" />
+            <button>Gửi</button>
+          </div>
+          <div>
+            <p>VietGuru Vietnam Co.Ltd</p>
+            <p>
+              Số 18, ngõ 127, đường Hào Nam, phường Ô Chợ Dừa, quận Đống Đa, Hà
+              Nội
+            </p>
+            <p>1900.6789</p>
+            <p>support@vietguru.com</p>
+          </div>
+        </div>
+      </div>
+
+      {/* footer */}
+      <div>
+        <p>2023 © All Rights Reserved | Designed by VietGuru</p>
       </div>
     </main>
-  )
+  );
 }
