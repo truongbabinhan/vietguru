@@ -229,35 +229,35 @@ export default function Home() {
           alt="bg"
           width={133}
           height={145}
-          className="absolute right-[107px] top-[860px]"
+          className="absolute right-[107px] top-[860px] z-20"
         />
         <Image
           src="/hoi.png"
           alt="bg"
           width={126}
           height={120}
-          className="absolute left-[150px] top-[1100px]"
+          className="absolute left-[150px] top-[1100px] z-20"
         />
         <Image
           src="/nang.png"
           alt="bg"
           width={105}
           height={112}
-          className="absolute right-[209px] top-[1800px]"
+          className="absolute right-[209px] top-[1800px] z-20"
         />
         <Image
           src="/sac.png"
           alt="bg"
           width={228}
           height={185}
-          className="absolute left-[68px] top-[2250px]"
+          className="absolute left-[68px] top-[2250px] z-20"
         />
         <Image
           src="/nag.png"
           alt="bg"
           width={244}
           height={170}
-          className="absolute right-[138px] bottom-[300px]"
+          className="absolute right-[138px] bottom-[300px] z-20"
         />
         <div className="w-full h-[100px] mb-[200px] relative">
           <Image
