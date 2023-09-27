@@ -1,27 +1,12 @@
 import Image from "next/image";
-
+import { SlLocationPin } from "react-icons/sl";
+import { FiMail, FiPhone } from "react-icons/fi";
+import Header from "./components/Header";
 export default function Home() {
-  const menu = ["Về Việt Guru", "Về ứng dụng", "Gói học", "Hỗ trợ"];
-
   return (
-    <main className="flex min-h-screen flex-col bg-white text-black">
+    <main className="flex min-h-screen flex-col bg-[#FAFAFA] text-black">
       {/* Header */}
-      <div className="px-[56px] py-[30px] flex items-center justify-between w-full border-b-[#BDBDBD] border-b">
-        <Image src="/logo.svg" alt="Logo" width={84} height={56} priority />
-        <ul
-          className="flex items-center gap-[64px] text-[#424242]"
-          style={{ fontFamily: "Baloo" }}
-        >
-          {menu.map((item, index) => {
-            return (
-              <li className="cursor-pointer hover:text-[#008AE3]" key={index}>
-                {item}
-              </li>
-            );
-          })}
-        </ul>
-        <p>VIE</p>
-      </div>
+      <Header />
 
       {/* Banner */}
       <div className="flex justify-center items-center gap-[120px] pt-[44px] pb-[110px]">
@@ -307,8 +292,8 @@ export default function Home() {
         >
           VIỆT GURU có gì hay?
         </p>
-        <div className="flex justify-center items-center gap-[25px]">
-          <div className="w-[275px] h-[436px] rounded-[20px] flex flex-col items-center gap-4 text-center">
+        <div className="flex justify-center items-center gap-[25px] mb-[160px]">
+          <div className="bg-[#FFF0EB] py-[25px] px-[30px] w-[275px] h-[436px] rounded-[20px] flex flex-col items-center gap-4 text-center">
             <Image
               src="/onboarding-graphic-02.png"
               alt="bg"
@@ -316,14 +301,22 @@ export default function Home() {
               height={100}
               style={{ width: "auto", height: "161px" }}
             />
-            <p>Học tiếng việt cực vui</p>
-            <p>
+            <p
+              style={{ fontFamily: "Cubano", lineHeight: 1.2 }}
+              className="text-[20px]"
+            >
+              Học tiếng việt cực vui
+            </p>
+            <p
+              style={{ fontFamily: "Baloo", lineHeight: 1.2 }}
+              className="text-[20px] text-[#616161]"
+            >
               Nội dung chất lượng do Viện ngôn ngữ học biên soạn, đa dạng bài
               học dưới dạng trò chơi tương tác, sách đọc, video,.... không gây
               nhàm chán.
             </p>
           </div>
-          <div className="w-[275px] h-[436px] rounded-[20px] flex flex-col items-center gap-4 text-center">
+          <div className="bg-[#EBE4FF] py-[25px] px-[25px] w-[275px] h-[436px] rounded-[20px] flex flex-col items-center gap-4 text-center">
             <Image
               src="/onboarding-graphic-03.png"
               alt="bg"
@@ -331,14 +324,21 @@ export default function Home() {
               height={100}
               style={{ width: "auto", height: "161px" }}
             />
-            <p>Học tiếng việt cực vui</p>
-            <p>
-              Nội dung chất lượng do Viện ngôn ngữ học biên soạn, đa dạng bài
-              học dưới dạng trò chơi tương tác, sách đọc, video,.... không gây
-              nhàm chán.
+            <p
+              style={{ fontFamily: "Cubano", lineHeight: 1.2 }}
+              className="text-[20px]"
+            >
+              Tích điểm đổi vòng bay
+            </p>
+            <p
+              style={{ fontFamily: "Baloo", lineHeight: 1.2 }}
+              className="text-[20px] text-[#616161]"
+            >
+              Mang lại cơ hội trải nghiệm thực tế, đối vé máy bay về thăm quê
+              hương thông qua các nhiệm vụ học mỗi ngày
             </p>
           </div>
-          <div className="w-[275px] h-[436px] rounded-[20px] flex flex-col items-center gap-4 text-center">
+          <div className="w-[275px] bg-[#FFFADF] py-[25px] px-[30px] h-[436px] rounded-[20px] flex flex-col items-center gap-4 text-center">
             <Image
               src="/onboarding-graphic-04.png"
               alt="bg"
@@ -346,14 +346,21 @@ export default function Home() {
               height={100}
               style={{ width: "auto", height: "161px" }}
             />
-            <p>Học tiếng việt cực vui</p>
-            <p>
-              Nội dung chất lượng do Viện ngôn ngữ học biên soạn, đa dạng bài
-              học dưới dạng trò chơi tương tác, sách đọc, video,.... không gây
-              nhàm chán.
+            <p
+              style={{ fontFamily: "Cubano", lineHeight: 1.2 }}
+              className="text-[20px]"
+            >
+              khám phá văn hóa
+            </p>
+            <p
+              style={{ fontFamily: "Baloo", lineHeight: 1.2 }}
+              className="text-[20px] text-[#616161]"
+            >
+              Thu hẹp khoảng cách, giúp bé tiếp cận và đến gần hơn với văn hóa
+              địa phương, nâng cao khả năng giao tiếp đời sống
             </p>
           </div>
-          <div className="w-[275px] h-[436px] rounded-[20px] flex flex-col items-center gap-4 text-center">
+          <div className="w-[275px] bg-[#E7FFB4] py-[25px] px-[30px] h-[436px] rounded-[20px] flex flex-col items-center gap-4 text-center">
             <Image
               src="/onboarding-graphic-05.png"
               alt="bg"
@@ -361,67 +368,181 @@ export default function Home() {
               height={100}
               style={{ width: "auto", height: "161px" }}
             />
-            <p>Học tiếng việt cực vui</p>
-            <p>
-              Nội dung chất lượng do Viện ngôn ngữ học biên soạn, đa dạng bài
-              học dưới dạng trò chơi tương tác, sách đọc, video,.... không gây
-              nhàm chán.
+            <p
+              style={{ fontFamily: "Cubano", lineHeight: 1.2 }}
+              className="text-[20px]"
+            >
+              kết nối về cội nguồn
+            </p>
+            <p
+              style={{ fontFamily: "Baloo", lineHeight: 1.2 }}
+              className="text-[20px] text-[#616161]"
+            >
+              Bé kết nối với gia đình, cội nguồn và phát triễn kĩ năng luyện nói
+              thông qua tính năng gọi video call cho người thân và chấm điểm
+              trực tiếp trên ứng dụng
             </p>
           </div>
+        </div>
+        <div className="w-full h-[100px] relative">
+          <Image
+            src="/pink-bottom.png"
+            alt="bg"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top"
+          />
         </div>
       </div>
 
       {/* package */}
-      <div>
+      <div className="bg-[#feefeb] flex justify-center items-center gap-[100px] pt-[115px] pb-[160px]">
         <Image src="/package.png" alt="bg" width={490} height={422} />
         <div>
-          <span>Recommended</span>
-          <p>nâng cấp ngay</p>
-          <p>full package</p>
-          <ul>
+          <span
+            style={{ fontFamily: "Nunito", lineHeight: 1.2 }}
+            className="bg-[#FCD200] py-1 px-3 rounded-full text-[12px] font-bold"
+          >
+            Recommended
+          </span>
+          <p
+            style={{ fontFamily: "Cubano", lineHeight: 1.2 }}
+            className="text-[28px] mt-[15px] mb-[5px]"
+          >
+            nâng cấp ngay
+          </p>
+          <p
+            style={{ fontFamily: "Cubano", lineHeight: 1.2 }}
+            className="text-[60px] mb-[30px]"
+          >
+            full package
+          </p>
+          <ul
+            style={{ fontFamily: "Baloo", lineHeight: 1.5 }}
+            className="text-[20px] list-disc text-[#424242] pl-5"
+          >
             <li>Truy cập không giới hạn tất cả các tài liệu học tập</li>
             <li>Sử dụng đồng thời lên đến 4 tài khoản của bé</li>
             <li>Cung cấp tính năng thông báo và báo cáo học tập</li>
-            <li>BỘ QUÀ TẶNG BỘ HỌC TẬP ĐẶC BIỆT</li>
+            <li className="underline text-[#0A7BC2]">
+              BỘ QUÀ TẶNG BỘ HỌC TẬP ĐẶC BIỆT
+            </li>
           </ul>
-          <p>
-            chỉ từ <span>20$</span>/tháng
+          <p
+            style={{ fontFamily: "Nunito", lineHeight: 1.2 }}
+            className="text-right mt-5 text-[16px] text-bold text-[#212121]"
+          >
+            chỉ từ{" "}
+            <span
+              style={{ fontFamily: "Cubano", lineHeight: 1.2 }}
+              className="text-[60px] text-[#F01141] pl-3"
+            >
+              20$
+            </span>
+            /tháng
           </p>
         </div>
       </div>
 
       {/* Contact */}
-      <div>
-        <p>CONTACT US</p>
-        <p>
+      <div className="pt-[80px] pb-[120px] text-center bg-[#FAFAFA]">
+        <p
+          style={{ fontFamily: "Cubano", lineHeight: 1.2 }}
+          className="text-[40px] mb-5"
+        >
+          CONTACT US
+        </p>
+        <p
+          style={{ fontFamily: "Baloo", lineHeight: 1.2 }}
+          className="text-[#424242] text-[24px] mb-[60px]"
+        >
           Ba mẹ có thắc mắc về Việt Guru? Liên hệ ngay với chúng tôi để được tư
           vấn miễn phí 24/24
         </p>
-        <div>
-          <div>
-            <div>
-              <input type="text" placeholder="Họ và tên" />
-              <input type="text" placeholder="Email" />
+        <div className="flex justify-center items-center gap-[120px]">
+          <div
+            className="max-w-[700px] flex-1 flex flex-col gap-5"
+            style={{ fontFamily: "Nunito", lineHeight: 1.2 }}
+          >
+            <div className="flex gap-5">
+              <input
+                className="border-[#757575] border rounded-full flex-1 h-10 px-4"
+                type="text"
+                placeholder="Họ và tên"
+              />
+              <input
+                className="border-[#757575] border rounded-full flex-1 h-10 px-4"
+                type="text"
+                placeholder="Email"
+              />
             </div>
-            <input type="text" placeholder="Tiêu đề" />
-            <textarea type="text" placeholder="Nội dung" />
-            <button>Gửi</button>
+            <div>
+              <input
+                className="border-[#757575] w-full border rounded-full flex-1 h-10 px-4"
+                type="text"
+                placeholder="Tiêu đề"
+              />
+            </div>
+            <div>
+              <textarea
+                className="border-[#757575] border py-4 w-full rounded-[30px] flex-1 h-[100px] px-4"
+                type="text"
+                placeholder="Nội dung"
+              />
+            </div>
+
+            <button className="w-full font-bold hover:bg-[#1FA2F4] hover:text-[#FAFAFA] bg-[#FCD200] h-10 border border-[#212121] rounded-full">
+              Gửi
+            </button>
           </div>
-          <div>
-            <p>VietGuru Vietnam Co.Ltd</p>
-            <p>
-              Số 18, ngõ 127, đường Hào Nam, phường Ô Chợ Dừa, quận Đống Đa, Hà
-              Nội
+          <div
+            style={{ fontFamily: "Nunito", lineHeight: 1.2 }}
+            className="w-[358px] text-left px-[25px] py-[30px] rounded-[30px] bg-[#1FA2F4] text-[#FAFAFA]"
+          >
+            <p
+              style={{ fontFamily: "Baloo", lineHeight: 1.2 }}
+              className="pb-4 text-[20px]"
+            >
+              VietGuru Vietnam Co.Ltd
             </p>
-            <p>1900.6789</p>
-            <p>support@vietguru.com</p>
+            <div className="flex flex-col gap-4 text-[16px]">
+              <p className="flex gap-4 items-start">
+                <span className="w-[24px]">
+                  <SlLocationPin size={24} />
+                </span>
+                Số 18, ngõ 127, đường Hào Nam, phường Ô Chợ Dừa, quận Đống Đa,
+                Hà Nội
+              </p>
+              <p className="flex gap-4 items-center">
+                <span className="w-[24px]">
+                  <FiPhone size={24} />
+                </span>
+                1900.6789
+              </p>
+              <p className="flex gap-4 items-center">
+                <span className="w-[24px]">
+                  <FiMail size={24} />
+                </span>
+                support@vietguru.com
+              </p>
+            </div>
+            <div className="flex justify-end items-center gap-3 mt-[35px]">
+              <Image src="/facebook.svg" alt="bg" width={24} height={24} />
+              <Image src="/instagram.svg" alt="bg" width={24} height={24} />
+              <Image src="/youtube.svg" alt="bg" width={24} height={24} />
+            </div>
           </div>
         </div>
       </div>
 
       {/* footer */}
-      <div>
-        <p>2023 © All Rights Reserved | Designed by VietGuru</p>
+      <div className="bg-[#212121] text-center py-4">
+        <p
+          className="text-[12px] text-[#FAFAFA]"
+          style={{ fontFamily: "Nunito", lineHeight: 1.2 }}
+        >
+          2023 © All Rights Reserved | Designed by VietGuru
+        </p>
       </div>
     </main>
   );
