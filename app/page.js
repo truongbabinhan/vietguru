@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { SlLocationPin } from "react-icons/sl";
 import { FiMail, FiPhone } from "react-icons/fi";
@@ -9,7 +10,7 @@ export default function Home() {
       <Header />
 
       {/* Banner */}
-      <div className="flex justify-center items-center gap-[120px] pt-[44px] pb-[110px]">
+      <div className="flex justify-center items-center gap-[120px] pt-[44px] pb-[50px]">
         <Image
           src="/phone-mockup.png"
           alt="banner"
@@ -51,8 +52,8 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* Ve VietGuru */}
+      <div id="section1" className="bg-[#fafafa] h-[67px]"></div>
       <div className="py-[60px] flex flex-col justify-center items-center w-full bg-[#FFFADF] relative overflow-hidden">
         <Image
           src="/flower.png"
@@ -285,7 +286,8 @@ export default function Home() {
       </div>
 
       {/* Co gi hay */}
-      <div className="bg-[#fafafa] pt-[60px]">
+      <div id="section2" className="bg-[#fafafa] h-[67px]"></div>
+      <div className="bg-[#fafafa] pt-[30px]">
         <p
           style={{ fontFamily: "Cubano", lineHeight: 1.2 }}
           className="text-center text-[40px] mb-[80px]"
@@ -396,7 +398,10 @@ export default function Home() {
       </div>
 
       {/* package */}
-      <div className="bg-[#feefeb] flex justify-center items-center gap-[100px] pt-[115px] pb-[160px]">
+      <div
+        id="section3"
+        className="bg-[#feefeb] flex justify-center items-center gap-[100px] pt-[115px] pb-[160px]"
+      >
         <Image src="/package.png" alt="bg" width={490} height={422} />
         <div>
           <span
@@ -445,7 +450,10 @@ export default function Home() {
       </div>
 
       {/* Contact */}
-      <div className="pt-[80px] pb-[120px] text-center bg-[#FAFAFA]">
+      <div
+        id="section4"
+        className="pt-[80px] pb-[120px] text-center bg-[#FAFAFA]"
+      >
         <p
           style={{ fontFamily: "Cubano", lineHeight: 1.2 }}
           className="text-[40px] mb-5"
